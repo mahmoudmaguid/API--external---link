@@ -1,4 +1,10 @@
 <?php
+  session_start(); // BEFORE ANY OUTPUT, YOU MUST DECLARE IF YOU'D LIKE TO USE SESSION.
+  // Let's check if our SESSION entry exists...
+  if ( !isset( $_SESSION['interests'] ) )
+  { // If it DOESN'T exist, let's make a default value (this way we can array_push to it later!)
+    $_SESSION['interests'] = array();
+  }
   $message = 'Welcome to the website, please log in.';
   // If a form has been submitted to this page, we can collect the submission
   // information using one of two SUPERGLOBALS:
@@ -18,6 +24,9 @@
     if ( ( $username === $submittedUsername ) && ( $password === $submittedPassword ) )
     {
       $message = 'Hello, ' . $username . ', thank you for logging in!';
+      // We are adding a new element to an array using the array_push function.
+      // The first argument is the array, the second is the element/value we are adding.
+      array_push( $_SESSION['interests'], $_POST['interest'] );
     }
     // Unsuccessful login...
     else
@@ -48,10 +57,17 @@
       Password:
       <input type="password" name="password" id="password">
     </label>
+    <label for="interest">
+      Add an interest:
+      <input type="text" name="interest" id="interest">
+    </label>
     <input type="submit" value="Sign In">
   </form>
   <pre>
     <?php var_dump( $_POST ); ?>
+  </pre>
+  <pre>
+    <?php var_dump( $_SESSION ); ?>
   </pre>
 </body>
 </html>
