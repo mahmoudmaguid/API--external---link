@@ -1,5 +1,42 @@
 <?php
+  // Basic assignment.
   $myMessage = 'My First PHP!';
+  # This is also a comment!
+  /*
+    Multi-line
+        comments
+
+      yay!
+   */
+
+  /**
+   * Data-Types.
+   */
+  // String.
+  $myString = 'Hello, World!';
+  // Integer.
+  $myInteger = 34;
+  // Float / Double.
+  $myFloat = 3.14;
+  // Boolean.
+  $myBoolTrue = TRUE;
+  $myBoolFalse = false;
+  // Null.
+  $myNull = NULL;
+  // Object.
+  $myObject = new stdClass();
+  // Array.
+  $myArray = [ 'First Item', 2, 'third item' ];
+  $myOtherArray = array(
+    $myString,
+    $myInteger,
+    $myFloat,
+    $myBoolTrue,
+    $myBoolFalse,
+    $myNull,
+    $myObject,
+    $myArray
+  );
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
