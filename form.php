@@ -63,10 +63,21 @@
     </label>
     <input type="submit" value="Sign In">
   </form>
+  <?php
+    if ( !empty( $_SESSION['interests'] ) ) {
+      echo '<h2>My Interests</h2><ul>';
+      foreach ( $_SESSION['interests'] as $interest ) {
+        echo "<li>$interest</li>";
+      }
+      echo '</ul>';
+    }
+  ?>
   <pre>
+    <strong>$_POST contents:</strong>
     <?php var_dump( $_POST ); ?>
   </pre>
   <pre>
+    <strong>$_SESSION contents:</strong>
     <?php var_dump( $_SESSION ); ?>
   </pre>
 </body>
