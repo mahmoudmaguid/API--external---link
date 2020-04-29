@@ -59,6 +59,7 @@
 </head>
 <body>
   <h1><?php echo $myMessage; ?></h1>
+  <?php include './includes/navigation.php'; ?>
   <pre>
     <?php
       // Var dump is great for seeing what's inside!
