@@ -63,15 +63,16 @@
     </label>
     <input type="submit" value="Sign In">
   </form>
-  <?php
-    if ( !empty( $_SESSION['interests'] ) ) {
-      echo '<h2>My Interests</h2><ul>';
-      foreach ( $_SESSION['interests'] as $interest ) {
-        echo "<li>$interest</li>";
-      }
-      echo '</ul>';
-    }
-  ?>
+  <?php if ( !empty( $_SESSION['interests'] ) ) : // Check if there ARE interests. ?>
+    <h2>My Interests:</h2>
+    <ul>
+      <?php foreach ( $_SESSION['interests'] as $interest ) : // Output EACH interest in the array. ?>
+        <li>
+          <?php echo $interest; ?>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
   <pre>
     <strong>$_POST contents:</strong>
     <?php var_dump( $_POST ); ?>
