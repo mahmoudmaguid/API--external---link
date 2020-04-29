@@ -4,6 +4,9 @@
     <li>
       <a href="./index.php">Home</a>
     </li>
+    <li>
+      <a href="./form.php">Form</a>
+    </li>
   </ul>
 </nav>
 <?php // By default, anything written in a PHP file will be sent to
