@@ -48,6 +48,8 @@
   $mySingleQuoteHelloString = 'Hi there! My name is $string2';
   // Double quotes are PARSED. PHP checks for variable names to echo out.
   $myDoubleQuoteHelloString = "Howdy there! My name is $string2";
+  // This is more specific, and would be good if you have overlapping variable names.
+  $myDoubleQuoteHelloString2 = "Howdy there! My name is {$string2}";
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
