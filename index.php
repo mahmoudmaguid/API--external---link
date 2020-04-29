@@ -44,6 +44,10 @@
   $string2 = 'Michael Jackson.';
   // We concatenate strings using the "." character. ("+" is reserved for addition.)
   $concattedString = $string1 . $string2;
+  // Difference between single and double quotes.
+  $mySingleQuoteHelloString = 'Hi there! My name is $string2';
+  // Double quotes are PARSED. PHP checks for variable names to echo out.
+  $myDoubleQuoteHelloString = "Howdy there! My name is $string2";
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,6 +66,15 @@
   <h2>Concatenated String</h2>
   <p>
     <?php echo $concattedString; ?>
+  </p>
+  <h2>Difference Between Single and Double Quoted Strings</h2>
+  <h3>Single Quoted</h3>
+  <p>
+    <?php echo $mySingleQuoteHelloString; ?>
+  </p>
+  <h3>Double Quoted</h3>
+  <p>
+    <?php echo $myDoubleQuoteHelloString; ?>
   </p>
 </body>
 </html>
