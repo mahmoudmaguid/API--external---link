@@ -1,4 +1,5 @@
 <?php
+  $message = 'Welcome to the website, please log in.';
   // If a form has been submitted to this page, we can collect the submission
   // information using one of two SUPERGLOBALS:
   // $_GET [array] (if the form was submitted with a GET method.)
@@ -10,6 +11,19 @@
     // instead of index numbers.) Key-value pair for associative.
     $submittedUsername = $_POST['username'];
     $submittedPassword = $_POST['password'];
+    // Expected username and password (hardcoded.)
+    $username = 'warren';
+    $password = 'mypass';
+    // Successful login...
+    if ( ( $username === $submittedUsername ) && ( $password === $submittedPassword ) )
+    {
+      $message = 'Hello, ' . $username . ', thank you for logging in!';
+    }
+    // Unsuccessful login...
+    else
+    {
+      $message = 'Uh oh! Please try again, your username and/or password were incorrect!';
+    }
   }
 ?><!DOCTYPE html>
 <html lang="en">
@@ -22,6 +36,9 @@
   <h1>PHP Form Handling</h1>
   <?php include './includes/navigation.php'; ?>
   <h2>Sign In Form</h2>
+  <p>
+    <?php echo $message; // Output our "sign-in" related message. ?>
+  </p>
   <form action="./form.php" method="POST"><?php // Forms can use GET or POST method. ?>
     <label for="username">
       Username:
