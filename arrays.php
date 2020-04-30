@@ -57,7 +57,10 @@
             // Checking if this is the interests (or another) array.
             if ( is_array( $value ) )
             { // Output each element in the array.
-              foreach ( $value as $element ) echo $element . ', ';
+              foreach ( $value as $element )
+              {
+                echo $element . ', ';
+              }
             }
             else
             { // Display the string / integer value, otherwise.
