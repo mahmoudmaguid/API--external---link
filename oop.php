@@ -10,6 +10,14 @@
    * A basic object.
    */
   $myObject = new stdClass(); // "new" keyword is REQUIRED when making an object from a CLASS (or BLUEPRINT.)
+  // To add a property to our object, we use the -> arrow syntax.
+  $myObject->name      = 'Jim Bob-Bob';
+  $myObject->age       = 41;
+  $myObject->interests = array( 'PHP', 'CSS' );
+  /**
+   * Include our class / blueprint file, so we can use our class.
+   */
+  include './includes/Snack.Class.php';
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
