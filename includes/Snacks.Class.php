@@ -1,5 +1,6 @@
-<?php
-include_once './Snack.Class.php';
+<?php // include_once is used to ensure this code is not included/run multiple times.
+// In the case of a class declaration, it would cause an error to run multiple times!
+include_once dirname( __FILE__ ) . '/Snack.Class.php';
 class Snacks
 {
   // Properties.
