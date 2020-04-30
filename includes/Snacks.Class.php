@@ -67,13 +67,13 @@ class Snacks
       }
       // If the Snack is not found...
       else
-      {
-        echo '<p>Sorry, we couldn\'t find a snack at ID:'.$id.'!</p>';
+      { // Output a warning for the user.
+        echo '<p>Sorry, we couldn\'t find a snack at ID: '.$id.'!</p>';
       }
     }
     // No ID, or an invalid ID was passed.
     else
-    {
+    { // Output a warning for the user.
       echo '<p>No ID, or an invalid ID was passed; unable to find snack for ID: '.$id.'.</p>';
     }
   }
