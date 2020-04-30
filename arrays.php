@@ -52,7 +52,19 @@
   <dl>
       <?php foreach ( $myAssociativeArray as $key => $value ) { // We can call upon KEY and VALUE at once in our loop! Note the fat arrow syntax. ?>
         <dt><?php echo( $key ); // This array element's Key. ?></dt>
-        <dd><?php echo( $value ); // This array element's Value. ?></dd>
+        <dd>
+          <?php
+            // Checking if this is the interests (or another) array.
+            if ( is_array( $value ) )
+            { // Output each element in the array.
+              foreach ( $value as $element ) echo $element . ', ';
+            }
+            else
+            { // Display the string / integer value, otherwise.
+              echo( $value ); // This array element's Value.
+            }
+          ?>
+        </dd>
       <?php } // Ends our foreach. ?>
   </dl>
 </body>
