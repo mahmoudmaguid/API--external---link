@@ -37,5 +37,15 @@
   <?php include './includes/navigation.php'; ?>
   <h2>$myObject dump:</h2>
   <pre><?php var_dump( $myObject ); ?></pre>
+  <h2>Snacks</h2>
+  <?php if ( count( $snacks ) > 0 ) : ?>
+    <ul>
+      <?php foreach ( $snacks as $snack ) : ?>
+        <li>
+          <?php $snack->output( TRUE ); // Run our method! It echoes the snack for us :) ?>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
 </body>
 </html>
