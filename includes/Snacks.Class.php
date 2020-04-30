@@ -20,6 +20,16 @@ class Snacks
       { // Store the array in our property.
         $this->allSnacks = $jsonObject->snacks;
       }
+      // If snacks are NOT an array.
+      else
+      { // Show a warning in the browser.
+        echo '<p>WARNING: The snacks appear to be malformed!</p>';
+      }
+    }
+    // If file doesn't exist.
+    else
+    { // Show a warning in the browser.
+      echo '<p>WARNING: Your file doesn\'t exist!</p>';
     }
   }
 
