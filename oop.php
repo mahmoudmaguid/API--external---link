@@ -18,6 +18,13 @@
    * Include our class / blueprint file, so we can use our class.
    */
   include './includes/Snack.Class.php';
+  // Let's make a snack...
+  $cheetos       = new Snack( 'Cheetos', 3.99, 'Chip' );
+  $gushers       = new Snack( 'Fruit Gushers', 2.56, 'Fruit' );
+  $jollyRanchers = new Snack( 'Jolly Ranchers', 1.25, 'Fruit' );
+  $sharwarma     = new Snack( 'Sharwarma', 7.86, 'Wrap' );
+  // Let's throw them in an array for easy output...
+  $snacks = array( $cheetos, $gushers, $jollyRanchers, $sharwarma );
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
