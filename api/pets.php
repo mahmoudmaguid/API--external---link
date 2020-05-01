@@ -41,6 +41,9 @@ $pets = array(
   )
 );
 
+// Set headers to be more descriptive.
+header( 'Content-Type: application/json' );
+
 // Convert from a PHP object/array, to a JSON string.
 $petsJSON = json_encode( $pets );
 
