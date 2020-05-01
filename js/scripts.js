@@ -26,7 +26,7 @@ fetch( 'http://localhost:80/api/pets.php' )
         <h4>Tricks</h4>
       `;
       const tricksList = document.createElement( 'UL' );
-      for ( trick of pets[petName].tricks ) {
+      for ( const trick of pets[petName].tricks ) {
         tricksList.innerHTML += `<li>${trick}</li>`;
       }
       listItem.appendChild( tricksList );
