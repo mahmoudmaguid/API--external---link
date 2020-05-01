@@ -8,7 +8,7 @@
   <title><?php echo $pageName; ?></title>
 
   <!-- Script(s) -->
-  <script type="text/javascript" src="./js/scripts.js"></script>
+  <script type="text/javascript" src="./js/scripts.js" defer></script>
 </head>
 <body>
   <h1><?php echo $pageName; ?></h1>
