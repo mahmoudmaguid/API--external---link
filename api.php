@@ -4,7 +4,7 @@
   // Convert the response to a PHP object.
   $productsObject = json_decode( $productsJSONString );
   // Collect the first user in the results array.
-  $products = $productsObject->results[0];
+  $products = $productsObject[0];
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +17,16 @@
   <?php include './includes/navigation.php'; ?>
   <h2>products review</h2>
   <dl>
-    <dt>product details</dt>
+    <dt><h2>product details</h2></dt>
     <dd>
-      <?php echo $products->product; ?>
-      <?php echo $products->manufacturer; ?>
-      <?php echo $products->category; ?>
-      <?php echo $products->videoTitle; ?>
-      <?php echo $products->videoCode; ?>
-      <?php echo $products->dateReleased; ?>
-      <?php echo $products->rating; ?>
+      <h2><?php echo $products->product; ?></h2>
+      
+      <h2><?php echo $products->manufacturer; ?></h2>
+      <h2><?php echo $products->category; ?></h2>
+      <h2><?php echo $products->videoTitle; ?></h2>
+      <h2><?php echo $products->videoCode; ?></h2>
+      <h2><?php echo $products->dateReleased; ?></h2>
+     <h2> <?php echo $products->rating; ?></h2>
     </dd>
   </dl>
 </body>
