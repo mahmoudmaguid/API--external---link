@@ -19,14 +19,20 @@
   <dl>
     <dt><h2>product details</h2></dt>
     <dd>
-      <h2><?php echo $products->product; ?></h2>
-      
-      <h2><?php echo $products->manufacturer; ?></h2>
-      <h2><?php echo $products->category; ?></h2>
-      <h2><?php echo $products->videoTitle; ?></h2>
-      <h2><?php echo $products->videoCode; ?></h2>
-      <h2><?php echo $products->dateReleased; ?></h2>
-     <h2> <?php echo $products->rating; ?></h2>
+        <h2>PRODUCT</h2>
+      <h3><?php echo $products->product; ?></h3>
+      <h2>MANUFACTURER</h2>
+      <h3><?php echo $products->manufacturer; ?></h3>
+      <h2>CATEGORY </h2>
+      <h3><?php echo $products->category; ?></h3>
+      <h2> VIDEOTITLE</h2>
+      <h3><?php echo $products->videoTitle; ?></h3>
+      <h2>VIDEO CODE</h2>
+      <h3><?php echo $products->videoCode; ?></h3>
+      <h2>DATE RELEASED</h2>
+      <h3><?php echo $products->dateReleased; ?></h3>
+      <h2>RATING</h2>
+      <h3> <?php echo $products->rating; ?></h3>
     </dd>
   </dl>
 </body>
